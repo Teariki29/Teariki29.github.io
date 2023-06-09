@@ -425,7 +425,7 @@ html, body {
 /* HERO
 ================================================== */
 .hero {
-  background: url(../img/moi.jpg) center no-repeat ;
+  background: url(../img/null.jpg) center no-repeat ;
   height: 100%;
   width: 100%;
   display: table;
@@ -435,7 +435,7 @@ html, body {
 
 .background-overlay:before {
   content: '';
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.2);
   height: 100%;
   width: 100%;
   position: absolute;
@@ -624,6 +624,7 @@ html, body {
 
 .section-subtitle span {
   position: relative;
+  color: #fff;
 }
 
 .section-subtitle span:before, .section-subtitle span:after {
@@ -744,6 +745,7 @@ html, body {
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 700;
+  color: #fff;
 }
 
 .main-service p {
@@ -751,6 +753,10 @@ html, body {
   font-size: 12px;
   color: #65b0bf;
   font-family: "Varela", sans-serif;
+}
+
+.main-service p>span{
+  color: #fff;
 }
 
 @media only screen and (max-width: 1199px) {
@@ -813,12 +819,20 @@ html, body {
   font-size: 28px;
 }
 
+.feature-about{
+  margin: 20px 0;
+}
+
+.feature-about p>span{
+  color: #fff;
+}
+
 .feature-about h3 {
   margin: 50px 0 0;
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
-  color: #65b0bf;
+  color: #fff;
 }
 
 .feature-about h2 {
