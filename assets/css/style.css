@@ -425,7 +425,7 @@ html, body {
 /* HERO
 ================================================== */
 .hero {
-  background: url(../img/null.jpg) center no-repeat ;
+  background: url(../img/null.jpg) center no-repeat fixed;
   height: 100%;
   width: 100%;
   display: table;
@@ -435,7 +435,7 @@ html, body {
 
 .background-overlay:before {
   content: '';
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0);
   height: 100%;
   width: 100%;
   position: absolute;
@@ -827,6 +827,10 @@ html, body {
   color: #fff;
 }
 
+.feature-about p>span>a{
+  color: #fff;
+}
+
 .feature-about h3 {
   margin: 50px 0 0;
   font-size: 16px;
@@ -1164,11 +1168,16 @@ html, body {
 
 .service-info h3 {
   font-size: 28px;
+  color: #fff;
   margin: 20px 0 0;
 }
 
 .service-info p {
   margin: 30px 0 0;
+}
+
+.service-info p>span{
+  color: #fff;
 }
 
 .nav-tabs .col-sm-fifth,
@@ -2079,6 +2088,16 @@ html, body {
 /* Sections background: Quote */
 .section-quote {
   background: url(../img/quote.jpg) center no-repeat fixed;
+}
+
+.background-overlay2::before{
+  content: '';
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  z-index: 0;
 }
 
 .section-quote p {
