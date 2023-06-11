@@ -1180,6 +1180,14 @@ html, body {
   color: #fff;
 }
 
+.service-info p>span>a{
+  color: #fff;
+}
+
+.service-info p>span>a:hover{
+  color: #000;
+}
+
 .nav-tabs .col-sm-fifth,
 .item-controls .carousel-control i,
 .service .rectangle,
@@ -1832,9 +1840,9 @@ html, body {
 
 .portfolio-sorting {
   margin: 0;
-  border-top: 1px solid #f6f6f6;
-  border-right: 1px solid #f6f6f6;
-  border-bottom: 2px solid #65b0bf;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  border-bottom: 2px solid #fff;
   height: 47px;
 }
 
@@ -1849,19 +1857,20 @@ html, body {
   padding: 0 30px;
   line-height: 44px;
   height: 44px;
-  border-left: 1px solid #f6f6f6;
-  border-right: 1px solid #f6f6f6;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
   text-transform: uppercase;
+  color: #65b0bf;
 }
 
 .portfolio-sorting li a:hover, .portfolio-sorting li a.active {
   background-color: #65b0bf;
-  color: #65b0bf;
-  border-color: #65b0bf;
+  color: #fff;
+  border-color: #fff;
 }
 
 .portfolio-sorting li a:hover:after, .portfolio-sorting li a.active:after {
-  border-color: #65b0bf;
+  border-color: #339cb1;
 }
 
 .portfolio-sorting li a:after, .portfolio-sorting li a.acitve:after {
@@ -1871,7 +1880,7 @@ html, body {
   left: -1px;
   right: -1px;
   display: block;
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #fff;
   -webkit-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
@@ -1942,10 +1951,10 @@ html, body {
   background-color: #3b3b3b;
   opacity: 0;
   visibility: hidden;
-  -webkit-box-shadow: 4px 4px 0px 0px rgba(238, 238, 238, 0.5);
-  -o-box-shadow: 4px 4px 0px 0px rgba(238, 238, 238, 0.5);
-  -moz-box-shadow: 4px 4px 0px 0px rgba(238, 238, 238, 0.5);
-  box-shadow: 4px 4px 0px 0px rgba(238, 238, 238, 0.5);
+  -webkit-box-shadow: 4px 4px 0px 0px rgba(255, 255, 255, 1);
+  -o-box-shadow: 4px 4px 0px 0px rgba(255, 255, 255, 1);
+  -moz-box-shadow: 4px 4px 0px 0px rgba(255, 255, 255, 1);
+  box-shadow: 4px 4px 0px 0px rgba(255, 255, 255, 1);
   z-index: 99;
 }
 
@@ -1984,7 +1993,7 @@ html, body {
   margin: 10px 0 0;
   font-size: 12px;
   font-weight: 300;
-  color: #65b0bf;
+  color: #fff;
 }
 
 .portfolio-item:hover .portfolio-item-thumb {
@@ -2002,12 +2011,13 @@ html, body {
 .portfolio-item:hover .portfolio-item-thumb .rectangle {
   opacity: 1;
   visibility: visible;
+  color: #65b0bf;
 }
 
 .portfolio-item:hover .portfolio-item-thumb .rectangle:hover {
   background-color: #65b0bf;
   border-color: #65b0bf;
-  color: #65b0bf;
+  color: #3b3b3b;
 }
 
 .portfolio-item:hover .portfolio-info {
@@ -2063,6 +2073,10 @@ html, body {
   }
 }
 
+.section-works h2{
+  color: #65b0bf;    
+}
+
 /*
  * Sections: Background;
  */
@@ -2088,6 +2102,10 @@ html, body {
 /* Sections background: Quote */
 .section-quote {
   background: url(../img/quote.jpg) center no-repeat fixed;
+}
+
+.section-quote2{
+  background: url(../img/portfolio-8.jpg) center no-repeat fixed;
 }
 
 .background-overlay2::before{
@@ -2136,7 +2154,7 @@ html, body {
 }
 
 .section-twitter .rectangle i {
-  color: #65b0bf;
+  color: #3b3b3b;
 }
 
 .section-twitter .rectangle + p {
@@ -2217,6 +2235,10 @@ html, body {
   margin-top: 70px;
 }
 
+.section-contact h2{
+  color: #65b0bf;
+}
+
 .section-contact .btn {
   margin-top: 50px;
   width: 100%;
@@ -2225,7 +2247,7 @@ html, body {
 }
 
 .section-contact .btn:hover {
-  color: #65b0bf;
+  color: #3b3b3b;
   border-color: #65b0bf;
 }
 
@@ -2274,7 +2296,7 @@ textarea.form-control {
 
 .section-networks a {
   margin: 10px 8px 5px;
-  color: #65b0bf;
+  color: #3b3b3b;
   box-shadow: none;
 }
 
@@ -2332,7 +2354,7 @@ textarea.form-control {
   margin: 0 auto;
   width: 40px;
   height: 40px;
-  background-color: #000;
+  background-color: #3b3b3b;
   border: none;
   color: #65b0bf;
   box-shadow: none;
@@ -2345,6 +2367,10 @@ textarea.form-control {
 
 .site-footer .copyright {
   margin-bottom: 0;
+}
+
+.site-footer a:hover>i{
+  color: #3b3b3b;
 }
 
 @media only screen and (max-width: 767px) {
