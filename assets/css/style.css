@@ -36,7 +36,7 @@ html, body {
  * Background colors 
  */
 .blue-bg {
-  background-color: #65b0bf;
+  background-color: #67dee7;
 }
 
 /* 
@@ -44,34 +44,34 @@ html, body {
  */
 .btn {
   font-family: "Varela", sans-serif;
-  background-color: #65b0bf;
+  background-color: #67dee7;
   padding: 0 15px;
   color: rgb(101, 176, 191);
   height: 44px;
   line-height: 42px;
   border-radius: 0;
-  border: 1px solid #65b0bf;
+  border: 1px solid #67dee7;
   text-transform: uppercase;
 }
 
 .btn-inverted {
-  color: #65b0bf;
+  color: #67dee7;
   background-color: transparent;
   border-color: #3b3b3b;
 }
 
 .btn:hover,
 .btn:focus {
-  color: #65b0bf;
+  color: #67dee7;
   background-color: transparent;
   border-color: #3b3b3b;
 }
 
 .btn-inverted:hover,
 .btn-inverted:focus {
-  color: #65b0bf;
-  background-color: #65b0bf;
-  border-color: #65b0bf;
+  color: #67dee7;
+  background-color: #67dee7;
+  border-color: #67dee7;
 }
 
 /* 
@@ -117,7 +117,7 @@ html, body {
   margin: 0 auto;
   width: 230px;
   height: 230px;
-  background-color: #65b0bf;
+  background-color: #67dee7;
   border: 0;
   transform: translate(-50%, -50%) rotate(45deg);
   -webkit-transform: translate(-50%, -50%) rotate(45deg);
@@ -234,7 +234,7 @@ html, body {
   margin: 0 4px;
   width: 30px;
   height: 30px;
-  color: #65b0bf;
+  color: #67dee7;
 }
 
 .social-icons.small .rectangle i {
@@ -250,7 +250,7 @@ html, body {
 }
 
 .social-icons.small .rectangle:hover i {
-  color: #65b0bf;
+  color: #67dee7;
 }
 
 .social-icons .rectangle {
@@ -279,7 +279,7 @@ html, body {
   position: relative;
   padding: 0 30px 0 15px;
   height: 60px;
-  background-color: #339cb1;
+  background-color: #4ec2cb;
   z-index: 2;
 }
 
@@ -290,7 +290,7 @@ html, body {
   height: 100%;
   top: 0;
   right: 0;
-  background-color: #339cb1;
+  background-color: #4ec2cb;
 }
 
 .site-logo a {
@@ -306,7 +306,7 @@ html, body {
 
 /* Navigation */
 .site-navigation {
-  background-color: #65b0bf;
+  background-color: #67dee7;
 }
 
 .site-navigation.affix {
@@ -403,7 +403,7 @@ html, body {
   }
   .site-navigation .navbar-collapse {
     position: relative;
-    background-color: #65b0bf;
+    background-color: #67dee7;
     z-index: 99;
     text-align: center;
     border-top: 0;
@@ -445,7 +445,7 @@ html, body {
 }
 
 .hero-content {
-  color: #65b0bf ;
+  color: #67dee7 ;
   display: table-cell;
   vertical-align: middle;
   position: relative;
@@ -494,7 +494,7 @@ html, body {
 
 .hero-arrow a {
   font-size: 28px;
-  color: #65b0bf;
+  color: #67dee7;
 }
 
 @-webkit-keyframes home-arrow-down {
@@ -602,7 +602,7 @@ html, body {
   font-family: "Varela", sans-serif;
   margin: 0;
   font-size: 32px;
-  color: #65b0bf;
+  color: #67dee7;
   text-align: center;
   text-transform: uppercase;
 }
@@ -613,7 +613,7 @@ html, body {
   margin: 15px 0 0;
   font-size: 16px;
   line-height: 16px;
-  color: #65b0bf;
+  color: #67dee7;
   letter-spacing: 2px;
   text-align: center;
   text-transform: uppercase;
@@ -628,7 +628,7 @@ html, body {
   display: inline-block;
   content: '';
   height: 1px;
-  background-color: #65b0bf;
+  background-color: #67dee7;
   width: 20px;
   position: absolute;
   top: 50%;
@@ -650,11 +650,11 @@ html, body {
 .section-diff-title h2 {
   margin: 0;
   font-weight: 300;
-  color: #65b0bf;
+  color: #67dee7;
 }
 
 .rectangle{
-  background-color: #65b0bf;
+  background-color: #67dee7;
 }
 
 .section-diff-title p {
@@ -673,7 +673,7 @@ html, body {
   margin: 0 auto;
   height: 1px;
   width: 50px;
-  background-color: #65b0bf;
+  background-color: #67dee7;
 }
 
 @media only screen and (max-width: 991px) {
@@ -748,7 +748,7 @@ html, body {
 .main-service p {
   margin: 25px 0 0;
   font-size: 12px;
-  color: #65b0bf;
+  color: #67dee7;
   font-family: "Varela", sans-serif;
 }
 
@@ -837,12 +837,12 @@ html, body {
 }
 
 .feature-about h2 {
-  color: #65b0bf;
+  color: #67dee7;
 }
 
 .feature-about p {
   margin: 30px 0 0;
-  color: #65b0bf;
+  color: #67dee7;
 }
 
 @media only screen and (max-width: 767px) {
@@ -881,7 +881,7 @@ html, body {
   padding-bottom: 20px;
   margin-bottom: 40px;
   font-size: 18px;
-  color: #65b0bf;
+  color: #67dee7;
   text-transform: uppercase;
   text-align: left;
 }
@@ -921,7 +921,7 @@ html, body {
 
 .progress-bar {
   position: relative;
-  background-color: #65b0bf;
+  background-color: #67dee7;
   height: 10px;
 }
 
@@ -934,7 +934,7 @@ html, body {
   height: 0;
   border-style: solid;
   border-width: 0 15px 20px 15px;
-  border-color: transparent transparent #65b0bf transparent;
+  border-color: transparent transparent #67dee7 transparent;
   z-index: 2;
 }
 
@@ -956,7 +956,7 @@ html, body {
   position: absolute;
   top: -30px;
   right: -7px;
-  color: #65b0bf;
+  color: #67dee7;
   z-index: 3;
 }
 
@@ -978,7 +978,7 @@ html, body {
 /* Section: Counters */
 
 .oui{
-  color: #65b0bf;  
+  color: #67dee7;  
 }
 
 
@@ -1033,7 +1033,7 @@ html, body {
 .section-services.site-section {
   padding: 0;
   background-color: #3b3b3b;
-  color: #65b0bf;
+  color: #67dee7;
 }
 
 .section-services .container-fluid {
@@ -1064,7 +1064,7 @@ html, body {
 .section-services .nav-tabs .col-sm-fifth {
   height: 160px;
   background: #3b3b3b;
-  border-bottom: 3px solid #65b0bf;
+  border-bottom: 3px solid #67dee7;
 }
 
 .section-services .carousel-inner {
@@ -1102,7 +1102,7 @@ html, body {
   position: absolute;
   top: 50%;
   left: 50%;
-  color: #65b0bf;
+  color: #67dee7;
   font-size: 18px;
   transform: translate(-50%, -50%) rotate(-45deg);
   -webkit-transform: translate(-50%, -50%) rotate(-45deg);
@@ -1114,11 +1114,11 @@ html, body {
 
 .section-services .item-controls .carousel-control:hover, .section-services .item-controls .carousel-control:focus {
   background-color: #62676b;
-  border-color: #65b0bf;
+  border-color: #67dee7;
 }
 
 .section-services .item-controls .carousel-control:hover i, .section-services .item-controls .carousel-control:focus i {
-  color: #65b0bf;
+  color: #67dee7;
 }
 
 .section-services .item-controls.left i {
@@ -1148,7 +1148,7 @@ html, body {
   margin-bottom: 0;
   text-transform: uppercase;
   font-size: 12px;
-  color: #65b0bf;
+  color: #67dee7;
 }
 
 
@@ -1198,7 +1198,7 @@ html, body {
 
 .carousel-indicators .active .col-sm-fifth,
 .carousel-indicators a:hover .col-sm-fifth {
-  background-color: #65b0bf;
+  background-color: #67dee7;
   
 }
 
@@ -1219,11 +1219,11 @@ html, body {
 .carousel-indicators .active .service .rectangle i,
 .carousel-indicators a:hover .service .rectangle i {
   font-size: 32px;
-  color: #65b0bf;
+  color: #67dee7;
 }
 
 .carousel-indicators .active .service .rectangle {
-  color: #65b0bf;
+  color: #67dee7;
 }
 
 .carousel-indicators .active .service:after {
@@ -1237,7 +1237,7 @@ html, body {
   height: 0;
   border-style: solid;
   border-width: 15px 15px 0 15px;
-  border-color: #65b0bf transparent transparent transparent;
+  border-color: #67dee7 transparent transparent transparent;
   z-index: 99;
   
 }
@@ -1330,13 +1330,13 @@ html, body {
   box-shadow: none;
   z-index: 99;
   background-color: transparent;
-  color: #65b0bf;
+  color: #67dee7;
   border: 1px solid #3b3b3b;
 }
 
 .review-carousel .slick.rectangle:hover {
   background-color: #3b3b3b;
-  color: #65b0bf;
+  color: #67dee7;
 }
 
 .review-carousel .slick.rectangle.slick-next {
@@ -1363,7 +1363,7 @@ html, body {
 
 .review p {
   margin: 45px auto 0;
-  color: #65b0bf;
+  color: #67dee7;
   max-width: 1000px;
   overflow-x: hidden;
 }
@@ -1389,7 +1389,7 @@ html, body {
 .review .review-author h3 {
   margin: 0;
   font-size: 14px;
-  color: #65b0bf;
+  color: #67dee7;
 }
 
 .review .review-author p {
@@ -1512,9 +1512,9 @@ html, body {
 .team-member .team-member-back {
   padding: 0 20px;
   display: table;
-  background: #65b0bf;
+  background: #67dee7;
   text-align: center;
-  color: #65b0bf;
+  color: #67dee7;
   transform: rotateY(-180deg);
   -webkit-transform: rotateY(-180deg);
   -moz-transform: rotateY(-180deg);
@@ -1590,7 +1590,7 @@ html, body {
 }
 
 .section-history .section-diff-title h2 {
-  color: #65b0bf;
+  color: #67dee7;
 }
 
 .section-history .section-diff-title p {
@@ -1682,7 +1682,7 @@ html, body {
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 0;
-  color: #65b0bf;
+  color: #67dee7;
 }
 
 .timeline > li > .timeline-panel .timeline-heading .timeline-date,
@@ -1692,7 +1692,7 @@ html, body {
 
 .timeline > li > .timeline-panel .timeline-heading .timeline-date {
   padding: 0 10px;
-  background-color: #65b0bf;
+  background-color: #67dee7;
 }
 
 .timeline > li > .timeline-panel .timeline-heading .timeline-position {
@@ -1857,11 +1857,11 @@ html, body {
   border-left: 1px solid #fff;
   border-right: 1px solid #fff;
   text-transform: uppercase;
-  color: #65b0bf;
+  color: #67dee7;
 }
 
 .portfolio-sorting li a:hover, .portfolio-sorting li a.active {
-  background-color: #65b0bf;
+  background-color: #67dee7;
   color: #fff;
   border-color: #fff;
 }
@@ -1895,7 +1895,7 @@ html, body {
   height: 0;
   border-style: solid;
   border-width: 10px 10px 0 10px;
-  border-color: #65b0bf transparent transparent transparent;
+  border-color: #67dee7 transparent transparent transparent;
   z-index: 99;
 }
 
@@ -1926,7 +1926,7 @@ html, body {
 
 .portfolio-item .portfolio-item-thumb:after {
   content: '';
-  background-color: #65b0bf;
+  background-color: #67dee7;
   position: absolute;
   left: 0;
   right: 0;
@@ -2008,12 +2008,12 @@ html, body {
 .portfolio-item:hover .portfolio-item-thumb .rectangle {
   opacity: 1;
   visibility: visible;
-  color: #65b0bf;
+  color: #67dee7;
 }
 
 .portfolio-item:hover .portfolio-item-thumb .rectangle:hover {
-  background-color: #65b0bf;
-  border-color: #65b0bf;
+  background-color: #67dee7;
+  border-color: #67dee7;
   color: #3b3b3b;
 }
 
@@ -2071,7 +2071,7 @@ html, body {
 }
 
 .section-works h2{
-  color: #65b0bf;    
+  color: #67dee7;    
 }
 
 /*
@@ -2088,7 +2088,7 @@ html, body {
 .section-background p {
   position: relative;
   margin: 10px 0 0;
-  color: #65b0bf;
+  color: #67dee7;
 }
 
 .section-background .btn {
@@ -2098,7 +2098,7 @@ html, body {
 
 /* Sections background: Quote */
 .section-quote {
-  background: url(../img/quote.jpg) center no-repeat fixed;
+  background: url(../img/portfolio-7.jpg) center no-repeat fixed;
 }
 
 .section-quote2{
@@ -2121,7 +2121,7 @@ html, body {
 }
 
 .section-quote p span {
-  color: #65b0bf;
+  color: #67dee7;
 }
 
 /* Sections background: Me */
@@ -2131,7 +2131,7 @@ html, body {
 
 .section-me h2 {
   margin: 0;
-  color: #65b0bf;
+  color: #67dee7;
   position: relative;
 }
 
@@ -2233,19 +2233,19 @@ html, body {
 }
 
 .section-contact h2{
-  color: #65b0bf;
+  color: #67dee7;
 }
 
 .section-contact .btn {
   margin-top: 50px;
   width: 100%;
   border-color: #dddddd;
-  color: #65b0bf;
+  color: #67dee7;
 }
 
 .section-contact .btn:hover {
   color: #3b3b3b;
-  border-color: #65b0bf;
+  border-color: #67dee7;
 }
 
 .form-control {
@@ -2258,7 +2258,7 @@ html, body {
 
 .form-control:focus {
   box-shadow: none;
-  border-bottom-color: #65b0bf;
+  border-bottom-color: #67dee7;
 }
 
 textarea.form-control {
@@ -2295,11 +2295,13 @@ textarea.form-control {
   margin: 10px 8px 5px;
   color: #3b3b3b;
   box-shadow: none;
+  border-color: #3b3b3b;
 }
 
 .section-networks a:hover, .section-networks a:focus {
   background-color: #3b3b3b;
-  color: #65b0bf;
+  color: #67dee7;
+
 }
 
 /* FOOTER
@@ -2325,22 +2327,22 @@ textarea.form-control {
 
 .site-footer ul a {
   font-size: 12px;
-  color: #65b0bf;
+  color: #54b9c1;
   text-transform: uppercase;
 }
 
 .site-footer ul a:hover {
-  color: #65b0bf;
+  color: #67dee7;
 }
 
 .site-footer a {
   font-size: 12px;
-  color: #65b0bf;
+  color: #67dee7;
   text-transform: uppercase;
 }
 
 .site-footer a:hover {
-  color: #65b0bf;
+  color: #67dee7;
 }
 
 .site-footer .rectangle {
@@ -2353,13 +2355,13 @@ textarea.form-control {
   height: 40px;
   background-color: #3b3b3b;
   border: none;
-  color: #65b0bf;
+  color: #67dee7;
   box-shadow: none;
 }
 
 .site-footer .rectangle:hover {
-  background-color: #65b0bf;
-  color: #65b0bf;
+  background-color: #67dee7;
+  color: #67dee7;
 }
 
 .site-footer .copyright {
@@ -2419,8 +2421,8 @@ textarea.form-control {
   top: -20px;
   height: 40px;
   width: 40px;
-  background-color: #65b0bf;
-  color: #65b0bf;
+  background-color: #67dee7;
+  color: #67dee7;
   box-shadow: none;
   border: 0;
   opacity: 1;
@@ -2428,8 +2430,8 @@ textarea.form-control {
 
 .modal-header .rectangle:hover {
   background-color: #3b3b3b;
-  color: #65b0bf;
-  border-color: #65b0bf;
+  color: #67dee7;
+  border-color: #67dee7;
 }
 
 .modal-header,
@@ -2443,8 +2445,8 @@ textarea.form-control {
 
 .modal-footer .btn:hover {
   background-color: #3b3b3b;
-  color: #65b0bf;
-  border-color: #65b0bf;
+  color: #67dee7;
+  border-color: #67dee7;
 }
 
 .modal-content {
