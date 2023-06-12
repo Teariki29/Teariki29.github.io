@@ -6,4 +6,4 @@ Description: Pixel Perfect Portfolio is a modern and elegant One-Page HTML templ
 Version: 1
 Author: Pixel Perfect Team
 Author URI: http://pixelperfect.mk/
-Keywords: HTML, CSS, Bootstrap, Responsive, Javascript, jQuery, Parallax, Portfolio, CV, Resume
+Keywords: HTML, CSS, Bootstrap, Responsive, Javascript, jQuery, Parallax, Portfolio, CV, Resume"# Teariki29.github.io" 
