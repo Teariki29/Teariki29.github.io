@@ -130,9 +130,17 @@ html, body {
   box-shadow: 10px 10px 0px 0px #dddddd;
 }
 
-.medium-rectangle {
+.medium-rectangle{
   width: 75px;
   height: 75px;
+}
+
+.medium-rectangle a{
+  color: #3b3b3b;
+}
+
+.medium-rectangle a:hover{
+  color: #fff;
 }
 
 /*
@@ -334,6 +342,7 @@ html, body {
   transition: border-color 0.25s ease-in-out;
 }
 
+
 .site-navigation .navbar-nav.navbar-right {
   margin-right: 0;
 }
@@ -383,7 +392,9 @@ html, body {
     line-height: 60px;
     border: 0;
   }
-  .site-navigation .navbar-toggle .icon-bar {
+
+  
+  .site-navigation .navbar-toggle .icon-bar{
     position: relative;
     background-color: #fff;
     transition: top 0.25s ease-in-out;
@@ -392,6 +403,7 @@ html, body {
     -o-transition: top 0.25s ease-in-out;
     -ms-transition: top 0.25s ease-in-out;
   }
+
   .site-navigation .navbar-toggle .icon-bar:first-child {
     top: 6px;
   }
@@ -569,6 +581,8 @@ html, body {
   animation: home-arrow-down 2s infinite;
   -webkit-animation-play-state: running;
   animation-play-state: running;
+  scale: 2;
+  margin-bottom: 35px;
 }
 
 
@@ -617,6 +631,7 @@ html, body {
   letter-spacing: 2px;
   text-align: center;
   text-transform: uppercase;
+  margin-bottom: 15px;
 }
 
 .section-subtitle span {
@@ -750,11 +765,21 @@ html, body {
   font-size: 12px;
   color: #67dee7;
   font-family: "Varela", sans-serif;
+  text-align: justify;
 }
 
 .main-service p>span{
   color: #fff;
 }
+
+.main-service p>span>a{
+  color: #fff;
+}
+
+.main-service p>span>a:hover{
+  color: #bfedff;
+}
+
 
 @media only screen and (max-width: 1199px) {
   /* Section: Hello */
@@ -828,6 +853,20 @@ html, body {
   color: #fff;
 }
 
+.feature-about p>span>a:hover{
+  color: #bfedff;
+}
+
+.logo-comp{
+  color: #3b3b3b; 
+}
+
+.logo-:hover{
+  color: #fff;
+}
+
+
+
 .feature-about h3 {
   margin: 50px 0 0;
   font-size: 16px;
@@ -843,6 +882,7 @@ html, body {
 .feature-about p {
   margin: 30px 0 0;
   color: #67dee7;
+  text-align: justify;
 }
 
 @media only screen and (max-width: 767px) {
@@ -1182,8 +1222,9 @@ html, body {
 }
 
 .service-info p>span>a:hover{
-  color: #000;
+  color: #bfedff;
 }
+
 
 .nav-tabs .col-sm-fifth,
 .item-controls .carousel-control i,
@@ -2364,8 +2405,9 @@ textarea.form-control {
   color: #67dee7;
 }
 
-.site-footer .copyright {
+.site-footer .copyright>a {
   margin-bottom: 0;
+  text-transform: none;
 }
 
 .site-footer a:hover>i{
@@ -2422,7 +2464,7 @@ textarea.form-control {
   height: 40px;
   width: 40px;
   background-color: #67dee7;
-  color: #67dee7;
+  color: #3b3b3b;
   box-shadow: none;
   border: 0;
   opacity: 1;
@@ -2441,6 +2483,10 @@ textarea.form-control {
 
 .modal-footer {
   border-top: 0;
+}
+
+.modal-footer .btn {
+  color: #3b3b3b;
 }
 
 .modal-footer .btn:hover {

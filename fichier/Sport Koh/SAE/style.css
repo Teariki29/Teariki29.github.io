@@ -1,0 +1,1633 @@
+/*------------------------------------------------------------------------------------*/
+/*-----------------------------------Style Général------------------------------------*/
+/*------------------------------------------------------------------------------------*/
+
+body{ 
+    width: 100%;    /*Permet de prendre 100% de la largeur de l'écran*/
+    margin: 0;
+    z-index: 0;     /*Permet de passer des éléments dessus et sous le body afin de cacher des éléments de la page catalogue_séjour*/
+    background-color: #EDE3CA;
+}
+main{
+    z-index: 0; 
+    background-color: #EDE3CA;
+}
+@font-face{ /*Permet d'utiliser la police de titre téléchargée dans le dossier "fonts"*/
+    font-family: 'Titre';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Titre'), url('fonts/Alfa_Slab_One_Regular.woff') format('woff');
+}
+@font-face { /*Permet d'utiliser la police de texte téléchargée dans le dossier "fonts"*/
+    font-family: 'Text';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Text'), url('fonts/GlacialIndifference-Regular.woff') format('woff');
+}
+/*Définition des tailles indiquées sur la maquette*/
+h1{
+    font-family: 'Titre', arial, sans-serif;
+    font-size: 30px;
+    font-weight: 100;
+}  
+h2{ 
+    font-family: 'Titre', arial, sans-serif;
+    font-size: 25px;
+    font-weight: 100;
+}
+p{ 
+    font-family: 'Text', arial, sans-serif;
+    font-size: 18px;
+    font-weight: 150;
+}
+/*Définition des tailles indiquées sur la maquette, ici pour avoir un entre deux entre téléphone et grand écran*/
+@media (max-width: 1150px) { 
+    h1{
+        font-size: 24px;
+    }
+    h2{
+        font-size: 18px;
+    }
+    p{ 
+        color: #050210;
+        font-size: 16px;
+    }
+}
+/*Définition des tailles indiquées sur la maquette pour le mode téléphone*/
+@media (max-width: 450px) { 
+    h1{
+        font-size: 18px;
+    }
+    h2{ 
+        font-size: 12px;
+    }
+    p{
+        color: #050210;
+        font-size: 10px;
+    }
+}
+
+.beige{color: #E0CD9D;}
+.noir{color: #050210;}
+.claire{background-color: #D1D7E6;} 
+.foncé{background-color: #576794;}
+
+/*Permet aux images de répondre le mieux possible à la responsivité sans avoir à définir des tailles précises*/
+img{
+    object-fit: cover;
+}
+
+/*------------------------------------------------------------------------------------*/
+/*-------------------------------------Page d'Accueil---------------------------------*/
+/*------------------------------------------------------------------------------------*/
+
+.conteneur_nouveaute_carte{ /*Conteneur du bloc nouveauté et de la carte intéractive*/
+    width: 100%;
+    height: 600px;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 160px 0 0 0;
+    background-image: url(images/fond_accueil.png);
+    background-size: cover;
+}
+@media screen and (max-width: 950px) { /*Passage du conteneur de row à column pour la version téléphone*/
+    .conteneur_nouveaute_carte{
+        flex-direction: column;
+        height: auto;
+    }
+}
+.carte_interactive{ /*Placement de la carte intéractive*/
+    width: 100%;
+    max-width: 500px;
+    margin: 0 0 0 10%;
+}
+.carte_interactive path{ /*Détails de la carte intéractive*/
+    fill: #d1d7e6;
+    stroke: #576794;
+    stroke-width: 1px;
+    transition: fill 0.3s;
+}
+.carte_interactive path:hover{
+    fill: #576794;
+}
+
+.nouveaute{ /*Placement du bloc nouveauté*/
+    height: 480px;
+    width: 200px;
+
+    margin: 50px 5% 0 0;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+@media screen and (max-width: 950px) { 
+    .carte_interactive{
+        margin: 50px 0 0 0;
+    }
+    .nouveaute{
+        margin: 0;
+    }
+}
+.titre_nouveaute{ /*Placement du bloc titre_nouveauté*/
+    background-color: #e0cd9d;
+    text-align: center;
+    height: 30px;
+    padding: 5px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.info_nouveaute{ /*Placement du bloc info_nouveauté*/
+    background-color: #ede3ca;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    box-shadow: -7px 7px 0px 0px #e0cd9d;
+}
+.image_nouveaute{
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+.titre_info_nouveaute{ /*Placement du bloc titre_info_nouveauté*/
+    width: 100px;
+    height: 30px;
+    background-color: #ede3ca;
+    position: absolute;
+    left: 25%;
+    text-align: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.texte_nouveaute{ /*Placement du bloc texte_nouveauté*/
+    height: 150px;
+    margin: 5px;
+}
+.bandelette{ /*Bande de 10px purement esthétique*/
+    width: 100%;
+    height: 10px;
+    background-color: #EDE3CA;
+}
+
+
+.formulesLastMin{ /*Placement du bloc formulesLastMin*/
+    background-color: #576794;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+}
+.titreLastMin{ /*Placement du bloc titreLastMin*/
+    margin: 20px 0 0 60px;
+    color: #E0CD9D;
+}
+@media screen and (max-width: 950px) { 
+    .titreLastMin{ /*Placement du bloc titreLastMin*/
+        margin: 20px 0 0 15%;
+    }
+}
+.conteneurLastMinute{ /*Placement du bloc conteneurLastMinute*/
+    margin: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.conteneurLastMinute>a{ /*Placement du bloc conteneurLastMinute*/
+    margin: 0 5%;
+}
+@media screen and (max-width: 950px) { 
+    .conteneurLastMinute{ /*Passage du conteneur de row à column pour la version téléphone*/
+        margin-top: 15px;
+        flex-direction: column;
+    }
+}
+.imagesLastMinute{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.LastMin1>hr, .LastMin2>hr, .LastMin3>hr{ /*Placement des barres horizontales décoratives*/
+    background-color: #d1d7e6;
+    width: 100%;
+    height: 2px;
+}
+.LastMin1, .LastMin2, .LastMin3{ /*Placement des blocs LastMin, avec chacun une largeur de 30% du bloc parent*/
+    width: 120%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative; 
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+@media screen and (max-width: 950px){ /*Placement des blocs LastMin, avec chacun une largeur de 80% du bloc parent car en mode column*/
+    .conteneurLastMinute>a{
+        width: 80%;
+    }
+}
+.conteneurInfoLastMin{ /*Placement du conteneur conteneurInfoLastMinute*/
+    display: flex;
+    flex-direction: row;   
+    position: relative;
+    align-items: center;
+    background-color: #d1d7e6;
+    width: 100%;
+    height: 60px;
+    border-radius: 0 0 7px 7px;
+}
+.note{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    margin: 0 0 0 5px;
+}
+.infoFormule{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 5%;
+    width: 50%;
+    height: 40px;
+    background: #576794;
+    border-radius: 7px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Troisième Bloc de la page d'accueil qui contient les blocs choix populaires ainsi que le bloc valeur du sport */
+.conteneurChoixValeurs{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    background-color: #ede3ca;
+    padding: 5%;
+}
+.conteneurChoixValeurs>hr{
+    background-color: #576794;
+    border: none;
+    width: 2px;
+}
+@media screen and (max-width: 950px) {
+    .conteneurChoixValeurs{
+        flex-direction: column;
+        align-items: center;
+    }
+    .conteneurChoixValeurs>hr{
+        display: none;
+    }
+}
+.valeursDuSport{
+    position: relative;
+    width: 35%;
+    height: 550px;
+}
+.valeursDuSport, .valeursDuSport>p{
+    color: #d1d7e6;
+}
+.imgValeurs{
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    filter: brightness(70%) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+@media screen and (max-width: 950px) {
+    .valeursDuSport{
+        width: 80%;
+        margin: 50px 0 0 0;
+    }
+}
+.valeursDuSport>h2{
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    width: 70%;
+    text-align: center;
+    right: 140px;
+}
+.valeursDuSport>p{
+    position: absolute;
+    top: 220px;
+    text-align: justify;
+    margin: 10px;
+}
+.choixPopulaire{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+}
+@media screen and (max-width: 950px) {
+    .choixPopulaire{
+        width: 80%;
+    }
+}
+.conteneurChoix{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-between;
+}
+.conteneurChoix>a{
+    width: 43%;
+}
+.titreChoixPop{
+    width: 100%;
+    height: 35px;
+    display: inline-flex;
+    align-items: center;
+    background-color: #e0cd9d;
+    padding: 3px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.choix1, .choix2{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 440px;
+}
+.imagesChoix{
+    width: 100%;
+    height: 40%;
+    object-fit: cover;
+}
+.conteneurDetailsChoix{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 380px;
+    box-shadow: -7px 7px 0px 0px #e0cd9d;
+}
+.conteneurDetailsChoix>p{
+    margin: 5px;
+}
+.titreChoix1, .titreChoix2{
+    position: absolute;
+    width: 160px;
+    padding: 2px;
+    text-align: center;
+    background-color: #ede3ca;
+    align-self: center;
+}
+.conteneurInfoChoix{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    height: 60px;
+}
+.noteChoix{
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    background-color: #e0cd9d;
+    height: 60%;
+    width: 60%;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.noteChoix>img{
+    margin: 0 1px 0 0;
+}
+.prixChoix{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e0cd9d;
+    height: 60%;
+    margin: 10px;
+    width: 20%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+/*------------------------------------------------------------------------------------*/
+/*---------------------------------Page de l'Herbergement-----------------------------*/
+/*------------------------------------------------------------------------------------*/
+
+
+.bloc_avis_prix{
+    background-image: url(images/fond_herbegement.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    min-height: 500px;
+    margin: 160px 0 0 0;
+    display: inline-block;
+    position: relative;
+}
+.bloc_note{
+    width: 390px;
+    height: 45px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    position: absolute;
+    left: 2%;
+    top: 5%;
+
+    background-color: #E0CD9D;
+    border: solid #E0CD9D 1px;
+    border-radius: 8px;
+    box-shadow:  0 3px 3px 0 #050210;
+}
+.titre_sejour{
+    width: 390px;
+    height: 45px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    position: absolute;
+    left: 2%;
+    top: 20%;
+
+    background-color: #E0CD9D;
+    border: solid #E0CD9D 1px;
+    border-radius: 8px;
+    box-shadow:  0 3px 3px 0 #050210;
+}
+.bloc_prix{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 55px;
+    width: 25%;
+    max-width: 200px;
+
+    position: absolute;
+    bottom: 5%;
+    left: 2%;
+
+    background-color: #E0CD9D;
+    border: solid #E0CD9D 1px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow:  0 3px 3px 0 #050210;
+}
+/***** POSITION IMAGE *****/
+.droit{
+    display: flex;
+    justify-content: flex-end;
+}
+.gauche{
+    justify-content: flex-start;
+}
+/***** ARTICLE *****/
+main>article{
+    margin: 20px 0;
+    box-shadow:  0 2px 3px 0 #050210;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+} 
+article>div{
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+article>div>p,article>div>h2{
+    margin-left: 20px;
+    margin-right: 20px;
+    align-items: center;
+}
+
+
+/*------------------------------------------------------------------------------------*/
+/*--------------------------------Page du détail des séjours--------------------------*/
+/*------------------------------------------------------------------------------------*/
+
+.debut_page{
+    width: 100%;
+    height: 550px;
+    background-image: url(images/velo_montagne.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 160px 0 0 0;
+    filter : drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.case_difficulte_detail_sejour{ /*Permet de postionner le bloc en bas à gauche de son parent ......*/
+    width: 110px;
+    height: 30px;
+
+    position: absolute;
+    bottom: 3%;
+    left: 2%;
+
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding: 5px;
+
+    background-color: #E0CD9D;
+    border: solid #576794; 
+    border-width: 3px;
+    border-radius: 30px;
+    object-fit: none;
+}
+@media screen and (max-width: 1150px) {
+    .case_difficulte_detail_sejour{
+        height: 45px;
+    }
+}
+/*---------------------------Paramètre de l'article de description du séjour-----------------------------------------------------------*/
+.Le_Sejour{
+    background-color: #D1D7E6;
+    width: 100%;
+    height: 400px;
+    display : flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    filter : drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.partie_sejour{
+    width: 50%;
+}
+.reservation{
+    width: 50%;
+}
+.prixsejour{
+    background-color: #576794;
+    width: 50%;
+    height: 30px;
+    color: white;
+    padding: 5px;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+@media screen and (max-width: 500px){
+    .Le_Sejour{
+        display: flex;
+        flex-direction: column;
+        height: 600px;
+    }
+    .partie_sejour, .reservation{
+        width: 100%;
+    }
+    .partie_sejour > .description{
+        width: 100%;
+    }
+}
+/*---------------------------Paramètre de l'article des plus du séjour-----------------------------------------------------------*/
+.plusdusej{
+    background-color: #576794;
+    color: #E0CD9D;
+    width: 100%;
+    height: 358px;
+    display : flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    filter : drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.image_plusdusej{
+    width: 50%;
+}
+.image_plusdusej img{
+    width: 100%;
+    height: 358px;
+}
+@media screen and (max-width:800px){
+    .plusdusej{
+        height: 300px;
+    }
+    .image_plusdusej img{
+        height: 300px;
+    }
+}
+/*---------------------------Paramètre de l'article des prestations inclus ou pas dans le séjour-----------------------------------------------------------*/
+.inclus_ou_pas{
+    background-color: #D1D7E6;
+    color: #050210;
+    width: 100%;
+    height: 281px;
+    display : flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    filter : drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    white-space: nowrap;
+
+}
+@media screen and (max-width:800px){
+    .inclus_ou_pas{
+        height: 220px;
+    }
+}
+.inclus, .noninclus{
+    width: 50%;
+    margin: 20px 20px 30px ;
+    text-align: center;
+    text-decoration: none;
+}
+.inclus_ou_pas img{
+    object-fit: none;
+}
+.pos_inclus{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center
+}
+/*---------------------------Paramètre de l'article sur l'explication de l'activité principal du séjour-----------------------------------------------------------*/
+.actprincipal{
+    background-color: #576794;
+    color: #E0CD9D;
+    width: 100%;
+    height: 381px;
+    display : flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    filter : drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.image_actprincipal{
+    width: 50%;
+}
+.image_actprincipal img{
+    width: 100%;
+    height: 381px;
+}
+@media screen and (max-width:800px){
+    .actprincipal{
+        height: 300px;
+    }
+    .image_actprincipal img{
+        height: 300px;
+    }
+}
+/*---------------------------Paramètre de l'article sur l'explication de l'activité secondaire du séjour-----------------------------------------------------------*/
+.actsecond{
+    background-color: #D1D7E6;
+    color: #050210;
+    width: 100%;
+    height: 322px;
+    display : flex;
+    flex-direction: row-reverse;
+    margin-bottom: 20px;
+    filter : drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.image_actsecond{
+    width: 50%;
+}
+.image_actsecond img{
+    width: 100%;
+    height: 322px;
+}
+@media screen and (max-width:800px){
+    .actsecond{
+        height: 300px;
+    }
+    .image_actsecond img{
+        height: 300px;
+    }
+}
+/*---------------------------Paramètre de l'article sur le programme détaillé du séjour-----------------------------------------------------------*/
+.programmedetail{
+    background-color: #576794;
+    color: #E0CD9D;
+    width: 100%;
+    height: 951px;
+    margin-bottom: 20px;
+    filter : drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+}
+.premierjour{
+    background-color: #D1D7E6;
+    color: #050210;
+    width: 100%;
+    height: 254px;   
+    display : flex;
+    flex-direction: row; 
+    margin-bottom: 10px;
+    filter : drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.image_premierjour{
+    width: 50%;
+}
+.image_premierjour img{
+    width: 100%;
+    height: 254px;
+}
+.progradetail_actp{
+    background-color: #D1D7E6;
+    color: #050210;
+    width: 100%;
+    height: 274px;
+    display : flex;
+    flex-direction: row-reverse;   
+    margin-bottom: 10px;
+    filter : drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); 
+}
+.position{
+    margin: 0 30px;
+}
+.image_actp{
+    width: 50%;
+}
+.image_actp img{
+    width: 100%;
+    height: 274px;
+}
+.progradetail_acts{
+    background-color: #D1D7E6;
+    color: #050210;    
+    width: 100%;
+    height: 254px;
+    display : flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    filter : drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.image_acts{
+    width: 50%;
+}
+.image_acts img{
+    width: 100%;
+    height: 254px;
+}
+/*---------------------------Paramètre de l'article sur l'hébergement du séjour-----------------------------------------------------------*/
+.hebergement{
+    background-color: #D1D7E6;
+    color: #050210;
+    width: 100%;
+    height: 332px;
+    display : flex;
+    flex-direction: row-reverse; 
+    margin-bottom: 20px;
+    filter : drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.image_hebergement{
+   width: 50%;
+}
+.image_hebergement img{
+    width: 100%;
+    height: 332px;
+ }
+.description{
+    margin-right: 3%;
+    margin-left: 3%;
+    height: auto;
+    width: 50%;
+}
+.pos_heber{
+    width: 50%;
+}
+.pos_heber .description{
+    width: 100%;
+}
+/*---------------------------Bouton Clique ici relié à la page hébergement-----------------------------------------------------------*/
+.clique_ici{
+    background-color: #576794;
+    border-radius: 5px;
+    color: #050210;
+    white-space: nowrap;
+    filter : drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+@media screen and (max-width:800px){
+    .hebergement{
+        height: 280px;
+    }
+    .image_hebergement img{
+        height: 280px;
+    }
+}
+
+/*------------------------------------------------------------------------------------*/
+/*------------------------------Page du Catalogue des séjours-------------------------*/
+/*------------------------------------------------------------------------------------*/
+
+.petite_barre{
+    width: 1px;
+    height: 103%;
+    position: absolute;
+    top: -10px;
+    left: -15px;
+    border: none;
+    border-right: 2px solid #576794;
+}
+.grande_barre_beige{
+    width: 1px;
+    height: 80%;
+    position: absolute;
+    top: 10%;
+    left: 51%;
+    border: none;
+    border-right: 2px solid #E0CD9D;
+}
+@media (max-width: 1150px) {
+    .grande_barre_beige{
+        display: none;
+    }
+}
+.petite_barre_beige{ 
+    width: 1px;
+    height: 103%;
+    position: absolute;
+    top: -10px;
+    left: -15px;
+    border: none;
+    border-right: 2px solid #E0CD9D;
+}
+
+/*------------------------------------------HEADER--------------------------------------------------*/
+
+header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 3;
+}
+.nav_du_header{
+    width: 100%;
+    height: 150px;
+    display: inline-flex;
+    justify-content: center;
+    background-color: #576794;
+}
+.nav_du_header>img{
+    position: absolute;
+    top: 10px;
+    left: 1%;
+}
+@media screen and (max-width: 1200px){
+    .nav_du_header>img{
+        display: none;
+    }
+}
+.nav_du_header>ul{
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+}
+.nav_du_header>ul>li{
+    margin: 0 3%;
+}
+@media screen and (max-width: 1150px) {
+    .nav_du_header>ul{
+        width: 90%;
+        flex-wrap: nowrap;  
+    } 
+    .nav_du_header>ul>li{
+        margin: 0 1%;
+    }
+}
+.h2_grand_1{
+    width: 350px;
+    color: #E0CD9D;
+}
+.h2_grand_2{
+    width: 200px;
+    color: #E0CD9D;
+}
+@media screen and (max-width: 1150px) {
+    .h2_grand_1{
+        width: auto;
+    }
+    .h2_grand_2{
+        width: auto;
+    }
+}
+.bandelette{
+    width: 100%;
+    height: 10px;
+    background-color: #EDE3CA;
+}
+
+
+
+/*--------------------------------------------MAIN--------------------------------------------------*/
+
+/*-----------------------------------------NAV PAYS-------------------------------------------------*/
+
+.nav_du_header_pays{
+    width: 100%;
+    height: auto;
+
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+    margin: 160px 0 0 0;
+    background-color: #576794;
+    text-align: center;
+    color: #050210;
+}
+.case_pays{
+    width: 20%;
+    height: 250px;
+
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    
+    margin: 10px 3% 40px ;
+    box-shadow: -7px 7px 0px 0px #E0CD9D;
+    background-color: #EDE3CA;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+@media (max-width: 1150px) { 
+    .nav_du_header_pays{
+        flex-wrap: wrap;
+    }
+    .case_pays{
+        width: 40%;
+    }
+}
+#pays_france{
+    background-image: url(images/case_pays_france.png); 
+    background-size: cover;
+    background-position: center;
+}
+#pays_espagne{
+    background-image: url(images/case_pays_espagne.png);
+    background-size: cover;
+    background-position: center;
+}
+#pays_italie{
+    background-image: url(images/case_pays_italie.png);
+    background-size: cover;
+    background-position: center;
+}
+#pays_grece{
+    background-image: url(images/case_pays_grece.png);
+    background-size: cover;
+    background-position: center;
+}
+.pays{
+    width: 100%;
+    height: 130px;
+    
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.titre_pays{
+    width: 90px;
+    height: 25px;
+    
+    text-align: center;
+    background-color: #EDE3CA;
+    padding: 2px;
+    box-shadow: 0px 3px 3px 0px #050210;
+}
+@media screen and (max-width: 1150px) {
+    .titre_pays{
+        height: 20px;
+    }
+}
+.texte_pays{
+    height: 106px;
+    background-color: #EDE3CA;
+    padding: 4px 10px 10px 10px;
+    margin: 0;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.lien_pays{
+    text-decoration: none;
+}
+/*-----------------------------------------France--------------------------------------------------*/
+
+.france{
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.bande_du_pays{
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start;
+
+    background-color: #576794;
+    text-align: start;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.bande_du_pays>h1{
+    margin: 15px 5px 2px 15px;
+    color: #E0CD9D;
+    font-weight: bold;
+}
+.voyages_france{
+    background-image: url(images/fond_france.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    position: relative;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+@media screen and (max-width: 1150px) {
+    .voyages_france{
+        flex-direction: column;
+    }
+}
+.gauche_voyages{
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 50px 0% 1% 10%;
+}
+.droite_voyages{
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 50px 5% 1% 5%;
+}
+@media screen and (max-width: 1150px) {
+    .gauche_voyages{
+        margin: 50px 5% 1% 5%;
+    }
+    .droite_voyages{
+        margin: 50px 5% 1% 5%;
+    }
+    .droite_voyages>img{
+        display: none;
+    }
+}
+.case_voyage_type_beige{
+    height: 85%;
+    width: 95%;
+    min-height: 150px;
+    max-height: 200px;
+    
+    position: relative;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
+    margin: 0 0 30px 0;
+    background-color: #EDE3CA;
+    border: solid #E0CD9D;
+    border-width: 3px; 
+    border-radius: 0 5px 15px 0;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+@media screen and (max-width: 1150px) {
+    .case_voyage_type_beige{
+        width: 100%;
+    }
+}
+.case_voyage_type_beige>img{ /*Permet d'avoir la bordure entre l'image et le texte dans la case*/
+    width: 30%;
+    height: auto;
+    min-width: 190px;
+    max-height: 200px;
+    
+    border-right: solid #E0CD9D;
+    border-width: 3px;
+    object-fit: cover;
+}
+.case_difficulte{ /*Permet de postionner le bloc en bas à gauche de son parent ......*/
+    width: 120px;
+    height: 30px;
+
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding: 5px;
+
+    background-color: #E0CD9D;
+    border: solid #576794; 
+    border-width: 3px;
+    border-radius: 30px; 
+}
+@media screen and (max-width: 1150px) {
+    .case_difficulte{
+        height: 40px;
+    }
+}
+.diff_et_ronds{
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+.diff_et_ronds>p{ /*Permet de bien controler la position des éléments*/
+    margin: 0 0 2px 0;
+}
+.ronds{ /*Permet de mettre les ronds en ligne*/
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.case_difficulte>img{ /*Permet de mettre un espace de 10px entre le bonhomme et la difficulté*/
+    margin: 0px 10px 0 0;
+}
+.ronds>img{ /*Permet de mettre un espace d'un 1px entre chaque rond*/
+    margin: 0 1px 0 0;
+}
+.paragraphe_case{
+    padding: 0 20px 0 0;
+}
+
+.droite_de_case_voyage{
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 0px 10px 10px 10px;
+}
+.voyages_titre_note{
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+.etoiles{
+    position: absolute;
+    right: 5px;
+    top: 0px;
+
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: 0 3px 0 3px;
+}
+.prix_case_voyage{
+    position: absolute;
+    right: 1%;
+    bottom: 1%;
+}
+.droite_de_case_voyage>p{
+    margin: 5px 0 0 0 ;
+}
+
+
+.carousel{
+    position: absolute;
+    z-index: -5;
+  }
+@media screen and (max-width: 1150px) {
+    .voyages_france>.grande_barre_beige, .voyages_france>.gauche_voyages, .voyages_france>.droite_voyages {
+        z-index: -5;
+        position: absolute;
+        top: 1px;
+        left: 1px;
+    }
+}
+/*----------------------------------------------------------------------------------------------*/
+
+.espagne{
+    width: 100%;
+    height: auto;
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.voyages_espagne{
+    width: 100%;
+    height: 600px; 
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+@media screen and (max-width: 1150px) {
+    .voyages_espagne{
+        flex-direction: column;
+        height: auto;
+    }
+}
+.espagne>img{
+    width: 83%;
+    display: flex;
+    align-self: center;
+    margin: -50px 0 70px 40px;
+    box-shadow: -7px 7px 0px 0px #E0CD9D;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.case_voyage_type_bleu{
+    height: 80%;
+    width: 95%;
+    min-height: 150px;
+    max-height: 250px;
+
+    position: relative;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
+    margin: 0 0 30px 0;
+    background-color: #D1D7E6;
+    border: solid #576794;
+    border-width: 3px; 
+    border-radius: 0 5px 15px 0;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+@media screen and (max-width: 1150px) {
+    .gauche_voyages>.case_voyage_type_bleu, .droite_voyages>.case_voyage_type_bleu {
+        width: 100%;
+        height: 50%;
+    }
+}
+.case_voyage_type_bleu>img{ /*Permet d'avoir la bordure entre l'image et le texte dans la case*/
+    width: 30%;
+    height: 100%;
+    min-width: 190px;
+    max-height: 200px;
+    
+    border-right: solid #D1D7E6;
+    border-width: 3px;
+    object-fit: cover;
+}
+.case_voyage_type_bleu>img{ /*Permet d'avoir la bordure entre l'image et le texte dans la case*/
+    width: 30%;
+    height: 100%;
+    min-width: 190px;
+    
+    border-right: solid #576794;
+    border-width: 3px;
+    object-fit: cover;
+}
+@media screen and (max-width: 1150px) {
+    .espagne>img{
+        display: none;
+    }
+}
+/*----------------------------------------------------------------------------------------------*/
+
+.italie{
+    width: 100%;
+    height: auto;
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.voyages_italie{
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+@media screen and (max-width: 1150px) {
+    .voyages_italie{
+        height: auto;
+        padding: 50px 0 0 0;
+        flex-direction: column;
+    }
+}
+.gauche_voyages_italie{
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 50px 0% 1% 10%;
+}
+.gauche_voyages_italie>img{
+    width: 100%;
+    height: 95%;
+    align-self: center;
+    object-fit: cover;
+    box-shadow: -7px 7px 0px 0px #E0CD9D;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+@media (max-width: 1150px) {
+    .gauche_voyages_italie{
+        display: none;
+    }
+    .droite_voyages>.case_voyage_type_bleu {
+        width: 100%;
+        height: 30%;
+    }
+}
+
+/*----------------------------------------------------------------------------------------------*/
+
+.grece{
+    width: 100%;
+    height: auto;
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.voyages_grece{
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+@media screen and (max-width: 1150px) {
+    .voyages_grece{
+        flex-direction: column;
+        padding: 50px 0 0 0;
+    }
+}
+.img_grece{
+    width: 96%;
+    height: 45%;
+    margin: 0 0 20px 0;
+    object-fit: cover;
+    box-shadow: -7px 7px 0px 0px #E0CD9D;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+
+
+/*----------------------------------------------------------------------------------------------*/
+
+footer{
+    color: #E0CD9D;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+footer>img{
+    align-self: center;
+    margin: 0 2% 0 2%;
+}
+@media (max-width: 1150px) {
+    footer{
+        position: relative;
+        flex-direction: column-reverse;
+        align-items: center;
+        z-index: 1;
+    }
+    footer>img{
+        width: 80px;
+        height: 80px;
+        left: 2%;
+        bottom: 60px;
+
+        position: absolute;
+        z-index: 2;
+        margin: 0;
+    }
+}
+.partie_de_gauche>hr, .sous_partie_de_gauche>hr{
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #E0CD9D;
+}
+.partie_de_gauche{
+    width: 30%;
+    margin: 0 3% 0 3%;
+}
+
+.partie_de_droite{
+    width: 30%;
+    margin: 0 3% 0 3%;
+}
+@media (max-width: 1150px) {
+    .partie_de_gauche{
+        width: 80%;
+    }
+    .partie_de_droite{
+        width: 80%;
+    }
+}
+.partie_de_droite>p{
+    margin: 30px 0 0 0;
+    text-align: justify;
+    color: #EDE3CA;
+}
+.sous_partie_de_gauche>h2{
+    width: 250px;
+    display: inline-flex;
+    justify-content: center;
+    border: 2px solid #050210;
+    border-radius: 30px;
+    padding: 15px 10%; 
+}
+.sous_partie_de_gauche>p{
+    color: #EDE3CA;
+}
+.ligne_logo{
+    display: inline-flex;
+}
+.ligne_contact{
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    margin: 30px 0 0 0;
+}
+.ligne_contact>img{
+    margin: 0 3% 0 0;
+}
+.ligne_contact>p>a{
+    color: #EDE3CA;
+}
+.ligne_contact>p>a:hover{
+    color: #E0CD9D;
+    background-color: #4b5a81;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+.lien_autre_page{
+    text-decoration: none;
+    color: #EDE3CA !important;
+}
+.lien_autre_page:hover{
+    color: #E0CD9D;
+    background-color: #4b5a81;
+    padding: 5px;
+    border-radius: 5px;
+}
+a{
+    text-decoration: none;
+    color: #050210;
+}
+
+
+
+
+/*--------------------------------------------------------*/
+/*------------------------CAROUSEL------------------------*/
+/*--------------------------------------------------------*/
+
+@media (max-width: 1150px){
+  .france{
+    height: 100%;
+  }
+  @keyframes tonext {
+    75% {left: 0;}
+    95% {left: 100%;}
+    98% {left: 100%;}
+    99% {left: 0;}
+  }
+  @keyframes tostart {
+    75% {left: 0;}
+    95% {left: -300%;}
+    98% {left: -300%;}
+    99% {left: 0;}
+  }
+  @keyframes snap {
+    96% {scroll-snap-align: center;}
+    97% {scroll-snap-align: none;}
+    99% {scroll-snap-align: none;}
+    100% {scroll-snap-align: center;}
+  }
+  * {
+    box-sizing: border-box;
+    scrollbar-color: transparent transparent;
+    scrollbar-width: 0px;
+  }
+  *::-webkit-scrollbar {
+    width: 0;
+  }
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: none;
+  }
+  * {
+    -ms-overflow-style: none;
+  }
+  .carousel__slide, .carousel__navigation-item, .carousel__viewport, .carousel__navigation-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .carousel {
+    position: relative;
+    padding-top: 1000px;
+    z-index: 1;
+    filter: drop-shadow(0 0 10px #0003);
+    perspective: 100px;
+    height: 100%;
+  }
+  .carousel__viewport {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    height: 100%;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+  }
+  .carousel__slide {
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    background-color: none;
+    counter-increment: item;
+  }
+  .carousel__slide1, .carousel__slide2 {
+    height: 80%;
+  }
+  .carousel__slide:nth-child(even) {
+    background-color: none;
+  }
+  .carousel__slide:before {
+    content: counter(item);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -40%, 70px);
+    color: transparent;
+    font-size: 2em;
+  }
+  .carousel__snapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: center;
+  }
+  @media (hover: hover) {
+    .carousel__snapper {
+      animation-name: tonext, snap;
+      animation-timing-function: ease;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+    }
+    .carousel__slide:last-child .carousel__snapper {
+      animation-name: tostart, snap;
+    }
+  }
+  .carousel:hover .carousel__snapper, .carousel:focus-within .carousel__snapper {
+    animation-name: none;
+  }
+  .carousel__navigation {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+  } 
+  .carousel__navigation-list, .carousel__navigation-item {
+    display: inline-block;
+  }
+  .carousel__navigation-button {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #333;
+    background-clip: content-box;
+    border: 0.25rem solid transparent;
+    border-radius: 50%;
+    font-size: 0;
+    transition: transform 0.2s;
+  }
+  .carousel::before, .carousel::after, .carousel__prev, .carousel__next {
+    position: absolute;
+    top: 0;
+    margin-top: 50%;
+    width: 4rem;
+    height: 4rem;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    font-size: 0;
+    outline: 0;
+  }
+  .carousel::before, .carousel__prev {
+    left: -1rem;
+  }
+  .carousel::after, .carousel__next {
+    right: -1rem;
+  }
+  .carousel::before, .carousel::after {
+    content: '';
+    z-index: 1;
+    background-color: #333;
+    background-size: 1.5rem 1.5rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #fff;
+    font-size: 2.5rem;
+    line-height: 4rem;
+    text-align: center;
+    pointer-events: none;
+  }
+  .carousel::before {
+    background-image: url("images/fleche_gauche.png");
+  }
+  .carousel::after {
+    background-image: url("images/fleche_droite.png");
+  }
+}
+  

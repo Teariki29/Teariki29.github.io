@@ -1,0 +1,44 @@
+programme  main  puissance 4 c'est
+
+/déclaration des constantes/
+constante chaîne[1] J1:=●;
+constante chaîne[1] J2:=o;
+
+début
+
+    /déclaration des variables/
+    tab :tableau[1..6][1..7];
+    joueur 1 :chaîne[20];
+    joueur 2 :chaîne[20];
+    joueur_actuel :chaîne[20];
+    pions :chaîne[1];
+    victoire :booléen;
+    m_nul :booléen;
+
+    /attribution des noms des joueurs/
+    écrireEcran("nom de joueur 1");
+    lireClavier(joueur 1);
+    écrireEcran("nom du joueur 2");
+    lireClavier(joueur 2);
+
+    /initialisation des variables/
+    joueur_actuel:=joueur 1;
+    pion:=J1;
+    victoire:=Faux;
+    m_nul:=Faux;
+
+    /boucle pour faire durer le jeux et qui se termine en cas de victoire où de match nul/
+    tant que (victoire!=Vrais OU match_nul!=vrais) faire
+        /procédure qui demmande où doit être poser le pion et le met dans le tableau/
+        poser_pions(SortE tab:tableau, EntE pion:chaîne[1]);
+        /procédure qui test tous les cas de victoire et retourne un booléen qui est vrais quand il y a un cas de victoire/
+        Test_Victoire(SortE victoire:booléen, SortE tab:tableau);
+        /procédure qui test si il y a plus de place dans le tableau et retourne un booléen qui est vrais quand il est plein/
+        Test_Nul(SortE m_nul:booléen, SortE tab:tableau);
+        /procédure qui affiche le tableau et aussi le nom du joueur actuel et si il y a un cas de victoire/
+        Affichage(SortE tab:tableau, EntE joueur_actuel:chaîne[20], SortE victoire:booléen);
+        /procédure qui permet de changer de joueur/
+        Change_joueur(SortE joueur_actuel:chaîne[20],SortE pion:chaîne[1], EntE joueur 1 :chaîne[20],EntE joueur 2 :chaîne[20], EntE J1:chaîne[1], EntE J2:chaîne[1]);
+    finfaire
+
+fin

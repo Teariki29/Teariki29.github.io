@@ -1,0 +1,122 @@
+Le puissance 4 est un jeux qui se joue en tour par tour. Au niveau de l'affichage, ce sera une grille, les pions seront posé en fonction des colones (en bas de ces dernières puis s'empileront les uns sur les autres).
+
+Une partie se finis quand 4 pions sont alligné (que ce soit en ligne, en colonne ou alors en diagonale)
+
+Cas de victoire
+
+ _____ _____ _____ _____ _____ _____ _____ 
+|     |     |     |     |     |     |     |
+|     |     |     |     |     |     |     |             
+|_____|_____|_____|_____|_____|_____|_____|             
+|     |     |     |     |     |     |     |
+|     |     |     |     |     |     |     |             
+|_____|_____|_____|_____|_____|_____|_____|             
+|     |     |     |     |     |     |     |             
+|     |     |     |  ●  |     |     |     |
+|_____|_____|_____|_____|_____|_____|_____|
+|     |     |     |     |     |     |     |            
+|     |     |  ●  |  ○  |     |     |     |
+|_____|_____|_____|_____|_____|_____|_____|
+|     |     |     |     |     |     |     |
+|     |  ●  |  ○  |  ●  |     |     |     |
+|_____|_____|_____|_____|_____|_____|_____|
+|     |     |     |     |     |     |     |
+|  ●  |  ○  |  ○  |  ○  |  ●  |     |     |
+|_____|_____|_____|_____|_____|_____|_____|
+|/////|/////|/////|/////|/////|/////|/////|
+|  1  |  2  |  3  |  4  |  5  |  6  |  7  |
+|_____|_____|_____|_____|_____|_____|_____|
+
+
+ joueur 1: ●
+ joueur 2: ○
+
+ Victoire de joueur 1
+
+
+c'est constituer de liste / tableau
+
+de forme[__, ,○,__, ,○,__, ,○,__, ,○,__, ,○,__, ,○,] pour les colonne
+
+il sufirat de multiplier par 3 ou alors de diviser par 3 pour avoir accès à la case avec le caractère (il faudrat commencé par la fin donc par la case 3*6 puis on réduira cette valeur si la case est déja pris soit 3*5 ect....)
+
+pour les ligne, elle seront écrite de forme [|, , ,○, , ,|, , ,○, , ,|, , ,○, , ,|, , ,○, , ,|, , ,○, , ,ect....]
+
+on devra donc mettre une dernière colone composé uniquement de "|" en plus
+
+la première valeur sera 4 puis ça augment de 6 en 6
+
+on devra donc commencer par regarder la valeur numéro 4 + (le numéro de la colone en question-1) *6
+
+
+Au début de la partie, on a donc:
+
+
+ _____ _____ _____ _____ _____ _____ _____ 
+|     |     |     |     |     |     |     |
+|     |     |     |     |     |     |     |              
+|_____|_____|_____|_____|_____|_____|_____|             
+|     |     |     |     |     |     |     |
+|     |     |     |     |     |     |     |             
+|_____|_____|_____|_____|_____|_____|_____|             
+|     |     |     |     |     |     |     |             
+|     |     |     |     |     |     |     |
+|_____|_____|_____|_____|_____|_____|_____|
+|     |     |     |     |     |     |     |             
+|     |     |     |     |     |     |     |
+|_____|_____|_____|_____|_____|_____|_____|
+|     |     |     |     |     |     |     |
+|     |     |     |     |     |     |     |
+|_____|_____|_____|_____|_____|_____|_____|
+|     |     |     |     |     |     |     |
+|     |     |     |     |     |     |     |
+|_____|_____|_____|_____|_____|_____|_____|
+|/////|/////|/////|/////|/////|/////|/////|
+|  1  |  2  |  3  |  4  |  5  |  6  |  7  |
+|_____|_____|_____|_____|_____|_____|_____|
+
+joueur 1: ●
+joueur 2: ○ 
+
+tour de joueur 1
+
+En pleine partie ça sera pareil que la sitiation d'avant avec pour unique différence que ce n'est pas forcément au joueur 1 de jouer
+
+
+Quand la grille est pleine, il y a alors match nul
+
+Cas de match nul
+
+
+ _____ _____ _____ _____ _____ _____ _____ 
+|     |     |     |     |     |     |     |
+|  o  |  o  |  o  |  ●  |  ●  |  ○  |  ●  |           
+|_____|_____|_____|_____|_____|_____|_____|            
+|     |     |     |     |     |     |     |
+|  ●  |  o  |  o  |  ●  |  ●  |  ●  |  ○  |             
+|_____|_____|_____|_____|_____|_____|_____|            
+|     |     |     |     |     |     |     |             
+|  ●  |  ●  |  ●  |  o  |  ○  |  ●  |  ●  |
+|_____|_____|_____|_____|_____|_____|_____|
+|     |     |     |     |     |     |     |             
+|  ●  |  o  |  ○  |  ●  |  ●  |  ○  |  ○  |
+|_____|_____|_____|_____|_____|_____|_____|
+|     |     |     |     |     |     |     |
+|  o  |  ●  |  ○  |  ●  |  ●  |  ○  |  ○  |
+|_____|_____|_____|_____|_____|_____|_____|
+|     |     |     |     |     |     |     |
+|  ●  |  ○  |  ○  |  ○  |  ●  |  ○  |  ●  |
+|_____|_____|_____|_____|_____|_____|_____|
+|/////|/////|/////|/////|/////|/////|/////|
+|  1  |  2  |  3  |  4  |  5  |  6  |  7  |
+|_____|_____|_____|_____|_____|_____|_____|
+
+joueur 1: ●
+joueur 2: ○ 
+
+Match nul
+
+
+Au niveau des cas à traité: Cas si la colonne est pas valide | pas de colonne portant ce nom, recommencez
+                            Cas si la colonne est plein      | colonne pleine, recommencez
+                            
