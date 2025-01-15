@@ -2522,3 +2522,16 @@ textarea.form-control {
     width: 36px;
   }
 }
+
+
+.marg{
+  margin-top: 30px;
+}
+
+.Loquali{
+  background-color: #FFF;
+  background-image: url("../img/logoLoquali.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
