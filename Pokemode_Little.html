@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemode little activé</title>
+    <link rel="stylesheet" href="projets/pokemode-little/html/css/style2.css">
+</head>
+<body>
+    <nav>
+        <img src="projets/pokemode-little/imageSite/logoPokeModeLittle.png" alt="logoPokeModeLittle" id="logoPokeModeLittle">
+        <div id="lienNav">
+            <a href="#sectionUne">Accueil</a>
+            <p>●</p>
+            <a href="#sectionDeux">Pokédex</a>
+            <p>●</p>
+            <a href="#sectionTrois">Simulateur</a>
+        </div>
+            <a href="https://www.pokemon.com/fr" id="lienPokeSite"><img src="projets/pokemode-little/imageSite/logoPokemonLien.png" alt="logoPokemonLien"></a>
+        
+        
+    </nav>
+    
+    <div id="sectionUne">
+
+        <img src="projets/pokemode-little/imageSite/fondAccueil.png" alt="" id="fondAccueil">
+
+        <img src="projets/pokemode-little/imageSite/dresseurs.png" alt="" id="dresseurs">
+        <img src="projets/pokemode-little/imageSite/herbesAccueil.png" alt="" id="herbes">
+        <img src="projets/pokemode-little/imageSite/banniere.png" alt="" id="banniere">
+
+        <div id="textAccueil">
+            <h1 id="titrePresent">
+                Bienvenue  Sur  PokeModeLittle !
+            </h1>
+
+            <p id="textPresent">
+                Que vous soyez un dresseur chevronné ou un novice passionné, vous êtes au bon endroit pour explorer un monde riche en créatures extraordinaires et en combats palpitants.<br>
+                Plongez dans un Pokédex exhaustif, regroupant les informations détaillées sur chaque Pokémon connu à ce jour. <br>
+                Mais notre site ne s'arrête pas là. <br>
+                Nous vous proposons également un simulateur de combat avancé, où vous pouvez créer des équipes de Pokémon et perfectionner vos compétences stratégiques.
+            </p>
+        </div>
+
+    </div>
+
+    <div id="sectionDeux">
+        
+        <div id="separation"></div>
+
+        <div id="find">
+            <div class="search-container">
+                <form action="#" id="recherche">
+                    <div class="search-input-container">
+                        <input id="rechercheData" type="text" placeholder="Nom ou numéro dans le Pokédex...">
+                        <button type="submit"><img src="projets/pokemode-little/imageSite/rechercher.png" alt=""></button>
+                    </div>
+                </form>
+            </div>
+
+                <div class="sort-container" id="SelectContainer">
+                    <select id="sort">
+                        <option id="BtnTriReset" value="reset">Type</option>
+                        <option id="BtnTrinormal" value="Normal">normal</option>
+                        <option id="BtnTriFire" value="Fire">feu</option>
+                        <option id="BtnTriWater" value="Water">eau</option>
+                        <option id="BtnTriElectric" value="Electric">electrique</option>
+                        <option id="BtnTriGrass" value="Grass">plante</option>
+                        <option id="BtnTriIce" value="Ice">glace</option>
+                        <option id="BtnTriFight" value="Fighting">combat</option>
+                        <option id="BtnTriPoison" value="Poison">poison</option>
+                        <option id="BtnTriGround" value="Ground">sol</option>
+                        <option id="BtnTriFlight" value="Flying">vol</option>
+                        <option id="BtnTriPsy" value="Psychic">psychique</option>
+                        <option id="BtnTriBug" value="Bug">insecte</option>
+                        <option id="BtnTriRock" value="Rock">roche</option>
+                        <option id="BtnTriGhost" value="Ghost">fantome</option>
+                        <option id="BtnTriDragon" value="Dragon">dragon</option>
+                        <option id="BtnTriDark" value="Dark">ombre</option>
+                        <option id="BtnTriSteel" value="Steel">acier</option>
+                        <option id="BtnTriFairy" value="Fairy">fée</option>
+                    </select>
+                </div>
+
+            <div class="sort-container-bis">
+                <select id="sort-bis">
+                    <option id="resetGen" value="gen">Génération</option>
+                    <option id="Generation 1" value="Generation 1">1</option>
+                    <option id="Generation 2" value="Generation 2">2</option>
+                    <option id="Generation 3" value="Generation 3">3</option>
+                    <option id="Generation 4" value="Generation 4">4</option>
+                    <option id="Generation 5" value="Generation 5">5</option>
+                    <option id="Generation 6" value="Generation 6">6</option>
+                    <option id="Generation 7" value="Generation 7">7</option>
+                    <option id="Generation 8" value="Generation 8">8</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="seeeeparation">
+            <div  id="separation2">
+                <button id="triId">Id</button>
+                <button id="triName">Nom</button>
+                <button id="triType">Type</button>
+                <button id="triGen">Génération</button>
+            </div>
+        </div>
+
+        <div id="pokemonscartes">
+        </div>
+        <div id="popup" class="hidden">
+            <div id="popup-content">
+                <div class="left-info">
+                    <p class="idpokemon"></p>
+                    <img src="" alt="" class="pokemon-image">
+                    <p class="nompokemon" id="popup-nom-pokemon"></p>
+                    <div class="type"></div>
+                </div>
+                <div class="right-info">
+                    <p class="generation"></p>
+                    <div id="stats">
+                        <p class="attaque"></p>
+                        <p class="defense"></p>
+                        <p class="stamina"></p>
+                    </div>
+
+                    <div id="attak">
+                        <div id="choix_attak">
+                            <select class="fast-moves-dropdown">
+                                <option value="">attaque rapide</option>
+                            </select>
+                            <select class="charged-moves-dropdown">
+                                <option value="">attaque chargée</option>
+                            </select>
+                        </div>
+
+                        <div id="attak-detail">
+                            <div class="fast-moves-dropdown-bis">
+                                <p class="critical_chance"></p>
+                                <p class="duration"></p>
+                                <p class="energy_delta"></p>
+                                <p class="move_id"></p>
+                                <p class="power"></p>
+                                <p class="stamina_loss_scaler"></p>
+                                <p class="typeMv"></p>
+                            </div>
+                            <div class="charged-moves-dropdown-bis">
+                                <p class="critical_chance2"></p>
+                                <p class="duration2"></p>
+                                <p class="energy_delta2"></p>
+                                <p class="move_id2"></p>
+                                <p class="power2"></p>
+                                <p class="stamina_loss_scaler2"></p>
+                                <p class="type2"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button id="closeButton"><img src="projets/pokemode-little/imageSite/close.png" alt=""></button>
+            </div>
+        </div>
+
+        <div  id="separation3">
+            <button id="presed"><img src="projets/pokemode-little/imageSite/flecheGauche.png" alt=""> Précedent</button>
+            <button id="suiv">Suivant <img src="projets/pokemode-little/imageSite/flecheDroite.png" alt=""></button>
+        </div>
+
+    </div>
+
+    <div id="sectionTrois">
+        <img src="projets/pokemode-little/webp/images/001.webp" alt="" id="pokeallie">
+        <img src="projets/pokemode-little/webp/images/004.webp" alt="" id="pokeenemi">
+    </div>
+
+
+    <button id="tri">tri</button>
+    <button id="reset">reset</button>
+
+
+
+</body>
+<script src="projets/pokemode-little/html/data/charged_moves.js"></script>
+<script src="projets/pokemode-little/html/data/cp_multiplier.js"></script>
+<script src="projets/pokemode-little/html/data/fast_moves.js"></script>
+<script src="projets/pokemode-little/html/data/generation.js"></script>
+<script src="projets/pokemode-little/html/data/pokemon_moves.js"></script>
+<script src="projets/pokemode-little/html/data/pokemon_type.js"></script>
+<script src="projets/pokemode-little/html/data/pokemons.js"></script>
+<script src="projets/pokemode-little/html/data/type_effectiveness.js"></script>
+<script src="projets/pokemode-little/html/data/type.js"></script>
+<script src="projets/pokemode-little/html/data/attack.js"></script>
+<script src="projets/pokemode-little/html/data/pokemon.js"></script>
+<script src="projets/pokemode-little/html/Version_Final_Belle/main.js"></script>
+
+
+
+</html>
+
