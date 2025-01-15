@@ -2537,5 +2537,5 @@ textarea.form-control {
 }
 
 .CONTACT{
-  font-weight: bold;
+  font-weight: bold !important;
 }
