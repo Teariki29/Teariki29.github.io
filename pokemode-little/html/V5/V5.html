@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemode little activé</title>
+    <link rel="stylesheet" href="../css/v1.css">
+    <link rel="stylesheet" href="../css/V3.css">
+
+</head>
+<body>
+
+
+    <h1>Liste des Pokémons</h1>
+
+    <div id="separation"></div>
+
+    <div id="find">
+        <div class="search-container">
+            <form action="#" id="recherche">
+                <div class="search-input-container">
+                    <input id="rechercheData" type="text" placeholder="Nom ou numéro dans le Pokédex...">
+                    <button type="submit"><img src="../../imageSite/rechercher.png" alt=""></button>
+                </div>
+            </form>
+        </div>
+
+            <div class="sort-container" id="SelectContainer">
+                <select id="sort">
+                    <option id="BtnTriReset" value="reset">Type</option>
+                    <option id="BtnTrinormal" value="Normal">normal</option>
+                    <option id="BtnTriFire" value="Fire">feu</option>
+                    <option id="BtnTriWater" value="Water">eau</option>
+                    <option id="BtnTriElectric" value="Electric">electrique</option>
+                    <option id="BtnTriGrass" value="Grass">plante</option>
+                    <option id="BtnTriIce" value="Ice">glace</option>
+                    <option id="BtnTriFight" value="Fighting">combat</option>
+                    <option id="BtnTriPoison" value="Poison">poison</option>
+                    <option id="BtnTriGround" value="Ground">sol</option>
+                    <option id="BtnTriFlight" value="Flying">vol</option>
+                    <option id="BtnTriPsy" value="Psychic">psychique</option>
+                    <option id="BtnTriBug" value="Bug">insecte</option>
+                    <option id="BtnTriRock" value="Rock">roche</option>
+                    <option id="BtnTriGhost" value="Ghost">fantome</option>
+                    <option id="BtnTriDragon" value="Dragon">dragon</option>
+                    <option id="BtnTriDark" value="Dark">ombre</option>
+                    <option id="BtnTriSteel" value="Steel">acier</option>
+                    <option id="BtnTriFairy" value="Fairy">fée</option>
+                </select>
+            </div>
+
+        <div class="sort-container-bis">
+            <select id="sort-bis">
+                <option id="resetGen" value="gen">Génération</option>
+                <option id="Generation 1" value="Generation 1">1</option>
+                <option id="Generation 2" value="Generation 2">2</option>
+                <option id="Generation 3" value="Generation 3">3</option>
+                <option id="Generation 4" value="Generation 4">4</option>
+                <option id="Generation 5" value="Generation 5">5</option>
+                <option id="Generation 6" value="Generation 6">6</option>
+                <option id="Generation 7" value="Generation 7">7</option>
+                <option id="Generation 8" value="Generation 8">8</option>
+            </select>
+        </div>
+    </div>
+
+    <button id="presed">Avant</button>
+    <button id="suiv">Suivant</button>
+
+
+
+    <table id="pokemonTable">
+      <thead>
+        <tr>
+          <th id="triId">ID</th>
+          <th id="triName">Nom</th>
+          <th id="triGen">Génération</th>
+          <th id="triAtk">Base Attack</th>
+          <th id="triDef">Base Defense</th>
+          <th id="triStam">Base Stamina</th>
+          <th id="triType">Types</th>
+          <th>Liste D'attaques</th>
+          <th>IMG</th>
+
+        </tr>
+      </thead>
+      <tbody id="pokemonTableBody">
+        <!-- Les données seront insérées ici dynamiquement -->
+      </tbody>
+      
+    </table>
+
+    <div id="popup" class="hidden">
+      <div id="popup-content">
+          <div class="left-info">
+              <p class="idpokemon"></p>
+              <img src="" alt="" class="pokemon-image">
+              <p class="nompokemon" id="popup-nom-pokemon"></p>
+              <div class="type"></div>
+          </div>
+          <div class="right-info">
+              <p class="generation"></p>
+              <div id="stats">
+                  <p class="attaque"></p>
+                  <p class="defense"></p>
+                  <p class="stamina"></p>
+              </div>
+
+              <div id="attak">
+                  <div id="choix_attak">
+                      <select class="fast-moves-dropdown">
+                          <option value="">attaque rapide</option>
+                      </select>
+                      <select class="charged-moves-dropdown">
+                          <option value="">attaque chargée</option>
+                      </select>
+                  </div>
+
+                  <div id="attak-detail">
+                      <div class="fast-moves-dropdown-bis">
+                          <p class="critical_chance"></p>
+                          <p class="duration"></p>
+                          <p class="energy_delta"></p>
+                          <p class="move_id"></p>
+                          <p class="power"></p>
+                          <p class="stamina_loss_scaler"></p>
+                          <p class="typeMv"></p>
+                      </div>
+                      <div class="charged-moves-dropdown-bis">
+                          <p class="critical_chance2"></p>
+                          <p class="duration2"></p>
+                          <p class="energy_delta2"></p>
+                          <p class="move_id2"></p>
+                          <p class="power2"></p>
+                          <p class="stamina_loss_scaler2"></p>
+                          <p class="type2"></p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <button id="closeButton"><img src="../../imageSite/close.png" alt=""></button>
+      </div>
+  </div>
+
+
+
+
+</body>
+<script src="../data/charged_moves.js"></script>
+<script src="../data/cp_multiplier.js"></script>
+<script src="../data/fast_moves.js"></script>
+<script src="../data/generation.js"></script>
+<script src="../data/pokemon_moves.js"></script>
+<script src="../data/pokemon_type.js"></script>
+<script src="../data/pokemons.js"></script>
+<script src="../data/type_effectiveness.js"></script>
+<script src="../data/type.js"></script>
+<script src="../data/attack.js"></script>
+<script src="../data/pokemon.js"></script>
+<script src="V5.js"></script>
+
+
+
+</html>
+

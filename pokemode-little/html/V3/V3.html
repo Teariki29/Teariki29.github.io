@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemode little activé</title>
+    <link rel="stylesheet" href="../css/v1.css">
+    <link rel="stylesheet" href="../css/V3.css">
+
+</head>
+<body>
+
+
+    <h1>Liste des Pokémons</h1>
+
+    <button id="presed">Avant</button>
+    <button id="suiv">Suivant</button>
+
+
+
+    <table id="pokemonTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nom</th>
+          <th>Génération</th>
+          <th>Base Attack</th>
+          <th>Base Defense</th>
+          <th>Base Stamina</th>
+          <th>Types</th>
+          <th>Attack</th>
+          <th>IMG</th>
+
+        </tr>
+      </thead>
+      <tbody id="pokemonTableBody">
+        <!-- Les données seront insérées ici dynamiquement -->
+      </tbody>
+      
+    </table>
+
+    <div id="popup" class="hidden">
+      <div id="popup-content">
+          <div class="left-info">
+              <p class="idpokemon"></p>
+              <img src="" alt="" class="pokemon-image">
+              <p class="nompokemon" id="popup-nom-pokemon"></p>
+              <div class="type"></div>
+          </div>
+          <div class="right-info">
+              <p class="generation"></p>
+              <div id="stats">
+                  <p class="attaque"></p>
+                  <p class="defense"></p>
+                  <p class="stamina"></p>
+              </div>
+
+              <div id="attak">
+                  <div id="choix_attak">
+                      <select class="fast-moves-dropdown">
+                          <option value="">attaque rapide</option>
+                      </select>
+                      <select class="charged-moves-dropdown">
+                          <option value="">attaque chargée</option>
+                      </select>
+                  </div>
+
+                  <div id="attak-detail">
+                      <div class="fast-moves-dropdown-bis">
+                          <p class="critical_chance"></p>
+                          <p class="duration"></p>
+                          <p class="energy_delta"></p>
+                          <p class="move_id"></p>
+                          <p class="power"></p>
+                          <p class="stamina_loss_scaler"></p>
+                          <p class="typeMv"></p>
+                      </div>
+                      <div class="charged-moves-dropdown-bis">
+                          <p class="critical_chance2"></p>
+                          <p class="duration2"></p>
+                          <p class="energy_delta2"></p>
+                          <p class="move_id2"></p>
+                          <p class="power2"></p>
+                          <p class="stamina_loss_scaler2"></p>
+                          <p class="type2"></p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <button id="closeButton"><img src="../../imageSite/close.png" alt=""></button>
+      </div>
+  </div>
+
+
+
+
+</body>
+<script src="../data/charged_moves.js"></script>
+<script src="../data/cp_multiplier.js"></script>
+<script src="../data/fast_moves.js"></script>
+<script src="../data/generation.js"></script>
+<script src="../data/pokemon_moves.js"></script>
+<script src="../data/pokemon_type.js"></script>
+<script src="../data/pokemons.js"></script>
+<script src="../data/type_effectiveness.js"></script>
+<script src="../data/type.js"></script>
+<script src="../data/attack.js"></script>
+<script src="../data/pokemon.js"></script>
+<script src="V3.js"></script>
+
+
+
+</html>
+
